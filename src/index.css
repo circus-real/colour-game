@@ -1,13 +1,18 @@
-body {
-  background-color: #1a1a1a;
-  color: #fff;
-  padding: 20px;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  font-family: sans-serif;
-  font-size: 20px;
+@layer base {
+  body {
+    @apply font-sans antialiased p-4 bg-gray-800 text-gray-300;
+  }
+  code {
+    @apply font-mono bg-gray-700 rounded-md px-1 py-0.5;
+  }
 }
 
-main {
-  display: flex;
-  justify-content: center;
+@layer components {
+  .btn {
+    @apply px-1 border-2 rounded-lg bg-gray-600 border-gray-400;
+  }
 }
