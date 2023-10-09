@@ -1,12 +1,16 @@
 import Box from "./Box";
 
-function Boxes() {
+interface Props {
+    varIdx: number;
+}
+
+function Boxes(props: Props) {
     return (
         <section class="grid grid-cols-2 gap-8">
-            <Box />
-            <Box />
-            <Box />
-            <Box />
+            <Box variant={props.varIdx === 0} />
+            <Box variant={props.varIdx === 1} />
+            <Box variant={props.varIdx === 2} />
+            <Box variant={props.varIdx === 3} />
         </section>
     );
 }
