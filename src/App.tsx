@@ -1,26 +1,26 @@
-import { createSignal, onMount } from "solid-js";
-import Boxes from "./Boxes"
+import { For, Show } from "solid-js";
+import { correctSignal, totalSignal } from "./utils";
+import Box from "./Box";
 
 function App() {
-    const [varIdx, setVarIdx] = createSignal<number>(0);
-
-    function chgColours(): void {
-        const red = () => Math.floor(Math.random() * 256);
-        const green = () => Math.floor(Math.random() * 256);
-        const blue = () => Math.floor(Math.random() * 256);
-        const colour = () => `rgb(${red()}, ${green()}, ${blue()})`;
-        document.documentElement.style.setProperty("--colour-variant", colour());
-        document.documentElement.style.setProperty("--colour-normal", colour());
-    }
-
-    onMount(chgColours);
+    const [correct,] = correctSignal;
+    const [total,] = totalSignal;
 
     return (
-        <main class="p-12 flex flex-col justify-center items-center gap-16">
+        <main class="p-12 flex flex-col justify-center items-center gap-8">
             <h1 class="text-6xl font-bold">Colour Game</h1>
-            <Boxes varIdx={varIdx()} />
-            <button class="btn" onClick={() => setVarIdx((n) => (n + 1) % 4)}>index</button>
-            <button class="btn" onClick={chgColours}>colour</button>
+            <section class="grid grid-cols-2 gap-8">
+                <For each={[0, 1, 2, 3]}>
+                    {(idx) => <Box idx={idx} />}
+                </For>
+            </section>
+            <section class="flex flex-col justify-center items-center">
+                <p class="text-2xl font-semibold">{correct()} correct out of {total()}
+                    <Show when={total() > 0}>
+                        {" "}- {Math.round(100 * correct() / total())}%
+                    </Show>
+                </p>
+            </section>
         </main>
     )
 }
