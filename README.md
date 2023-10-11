@@ -1,6 +1,6 @@
 # Colour game
 
-This is a little game to test how good you are at telling colours apart.
+A funny little game to test how good you are at telling colours apart.
 
 ## Contributors
 
