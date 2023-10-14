@@ -15,11 +15,9 @@ function App() {
                 </For>
             </section>
             <section class="flex flex-col justify-center items-center">
-                <p class="text-2xl font-semibold">{correct()} correct out of {total()}
-                    <Show when={total() > 0}>
-                        {" "}- {Math.round(100 * correct() / total())}%
-                    </Show>
-                </p>
+                <Show when={total() > 0}>
+                    <p class="text-2xl font-semibold">{correct()} correct out of {total()}{" "}- {Math.round(100 * correct() / total())}%</p>
+                </Show>
             </section>
         </main>
     )
