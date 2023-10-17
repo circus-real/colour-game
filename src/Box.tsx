@@ -1,6 +1,6 @@
 import { varIdxSignal, totalSignal, correctSignal, changeColours, randomiseIdx } from "./utils";
 
-interface Props {
+type Props = {
     idx: number;
 }
 
@@ -10,8 +10,7 @@ function Box(props: Props) {
     const [, setCorrect] = correctSignal;
 
     function isVariant(): boolean {
-        const variant = varIdx() === props.idx;
-        return variant;
+        return varIdx() === props.idx;
     }
 
     function handleGuess(): void {
