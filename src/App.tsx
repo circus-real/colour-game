@@ -16,7 +16,7 @@ function App() {
             </section>
             <Show when={total() > 0}>
                 <h3 class="text-4xl font-semibold">Score</h3>
-                <p class="text-2xl">{correct()} correct out of {total()}{" "}- {Math.round(100 * correct() / total())}%</p>
+                <p class="text-2xl">{correct()} correct out of {total()} - {Math.round(100 * correct() / total())}%</p>
             </Show>
         </main>
     )
