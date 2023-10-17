@@ -14,11 +14,10 @@ function App() {
                     {(idx) => <Box idx={idx} />}
                 </For>
             </section>
-            <section class="flex flex-col justify-center items-center">
-                <Show when={total() > 0}>
-                    <p class="text-2xl font-semibold">{correct()} correct out of {total()}{" "}- {Math.round(100 * correct() / total())}%</p>
-                </Show>
-            </section>
+            <Show when={total() > 0}>
+                <h3 class="text-4xl font-semibold">Score</h3>
+                <p class="text-2xl">{correct()} correct out of {total()}{" "}- {Math.round(100 * correct() / total())}%</p>
+            </Show>
         </main>
     )
 }

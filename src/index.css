@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --colour-normal: rgb(0, 0, 0);
+  --colour-variant: rgb(255, 255, 255);
+}
+
 @layer base {
   body {
     @apply font-sans antialiased p-4 bg-neutral-800 text-neutral-300;
@@ -15,9 +20,4 @@
   .btn {
     @apply px-1 border-2 rounded-lg bg-neutral-600 border-neutral-400;
   }
-}
-
-:root {
-  --colour-normal: rgb(0, 0, 0);
-  --colour-variant: rgb(255, 255, 255);
 }
