@@ -23,7 +23,7 @@ function App() {
           <p class="text-2xl">{correct()} correct out of {total()} - {Math.round(100 * correct() / total())}%</p>
         </Show>
       </main>
-      <footer class="fixed bottom-4 w-full text-center">
+      <footer class="w-full text-center">
         <p>Source code <a href="https://github.com/circus-real/colour-game/">here.</a></p>
         <p>Made by <a href="https://github.com/circus-real/">circus-real</a>.</p>
       </footer>
