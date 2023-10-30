@@ -24,7 +24,7 @@ function App() {
         </Show>
       </main>
       <footer class="fixed bottom-4 w-full text-center">
-        <p>Source code <a href="https://github.com/circus-real/colour-game/">here.</a></p>
+        <p>Source code <a href="https://github.com/circus-real/colour-game/">here</a>.</p>
         <p>Made by <a href="https://github.com/circus-real/">circus-real</a>.</p>
       </footer>
     </>
