@@ -3,10 +3,11 @@ import { render } from 'solid-js/web'
 
 import './index.css'
 import App from './App'
-import { changeColours } from './utils';
+import { changeColours, randomiseIdx } from './utils';
 
-const root = document.getElementById('root');
+const root = document.getElementById('root')! as HTMLDivElement;
 
+randomiseIdx();
 changeColours();
 
-render(() => <App />, root!);
+render(() => <App />, root);
